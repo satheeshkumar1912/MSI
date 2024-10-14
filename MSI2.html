@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <!-- Character Encoding -->
+        <meta charset="UTF-8">
+
+    <!-- Local CSS-->
+        <link rel="stylesheet" href="MSI2.css">
+        <link rel="icon" href="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298661/msi-logo-symbol_qac5eq.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="icon" href="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298661/msi-logo-symbol_qac5eq.png">
+    <!-- Viewport for Responsive Web Design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+        <title>MSI</title>
+    
+    <!-- Description (SEO) -->
+        <meta name="MSI webpage clone" content="A small try to create the MSI website's clone">
+    
+    <!-- Keywords (SEO) -->
+        <meta name="keywords" content="HTML, CSS, JavaScript, Web Development, etc.">
+    
+    <!-- Author -->
+        <meta name="Satheeshkumar" content="AWS">
+    
+    <!-- Robots (Search Engine Instructions) -->
+        <meta name="robots" content="index, follow">
+    
+    <!-- Charset Declaration -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Theme Color (for mobile browsers) -->
+        <meta name="theme-color" content="#ffffff">
+
+    <!-- Favicon (if applicable) -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!--Get your code at fontawesome.com-->
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Bootstrap 5.3.x CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.10/base.min.css" rel="stylesheet">
+
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            width:100vw;
+        }
+
+.msi-carousel {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.nav__bar__options {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top:0;
+    margin-left: 12%;
+    margin-top: 2%;
+    color:#696969;
+    font-weight: bold;
+}
+
+.li {
+    padding:0 12px;
+    transition: transform 0.3s;
+    cursor:pointer;
+}
+
+.nav__bar__icons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top:0;
+    right:0;
+    margin-right: 2%;
+    margin-top: 2%;
+   
+}
+
+.a{
+    transition: transform 0.3s;
+    cursor:pointer;
+}
+
+.a:hover {
+    transform: scale(1.5); 
+    color:black;
+}
+
+li:hover {
+        transform: scale(1.2); 
+        color:black;
+}
+
+.section1{
+    display:flex;
+    justify-content: space-around;
+}
+
+.section1_card {
+    width:100%;
+}
+
+.section2_table {
+    border: 1px solid white;
+    margin: auto;
+    width:70%;
+    height:0%;
+}
+
+.sec_card {
+    display:flex;
+    flex-direction: column;
+}
+
+.sec_card_flex {
+    display:flex;
+}
+
+.sec_card_flex_whole {
+    position:relative;
+    display:flex;
+    justify-content: center;
+    /* width:100%;
+    height:100%; */
+}
+
+.card:hover{
+
+    transform: scale(0.9);
+    transition: transform 0.3s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+
+.marg{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.MSI_products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers content */
+    align-items: center;     /* Horizontally centers content */
+    border: 0px solid #ccc;
+    padding: 20px;   
+}
+
+.MSI_products:hover {
+    transform:scale(1.2);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.product_image {
+    width: 100px;  
+}
+
+.product_title {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sec_producta_images {
+    display:flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;    
+}
+
+.png_images {
+    width:30px;
+    height:30px;
+}
+
+.full_png_icons {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.full_png_icons:hover {
+        transform: scale(1.1);
+        color:black;
+        transition-timing-function: ease-in-out;
+        transition-duration: .3s;
+        /* box-shadow: 0 0 15px 5px rgba(255, 242, 0, 0.7), 0 0 30px rgb(202, 255, 27);
+        transform: scale(1.05); Slightly increase size for emphasis */
+}
+
+.whole_Png_Icons_section {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+.wallet{
+    position: relative;
+    width: 48%;
+}
+
+
+.text_overlay {
+    position:absolute;
+    top:70%;
+    bottom:0;
+    padding:10px;
+    background-color: #d4cdcdb6;
+    width:100%;
+}
+
+.text-overlay:hover {
+    transform: translate(-50%, -50%) scale(1.2); /* Enlarges the text smoothly */
+    color: yellow;
+}
+
+.full_wallet_webp {
+    display:flex;
+    justify-content: space-between;
+    padding:30px;
+}
+
+.wallet{
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.wallet:hover {
+    transform: scale(0.9); 
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+}
+
+.footer1 {
+    display:flex;
+    justify-content: space-between;
+    margin-left:30px;
+    margin-right:30px;
+}
+
+.footer_community {
+    padding:20px;
+    margin-top: 20px;
+}
+
+.footer_lists {
+    padding-left:0px;
+    line-height: 2.5;
+}
+
+.last_footer_right {
+    position: absolute;
+    font-size: 12px;
+    padding:20px 10px;
+    right:1%;
+    
+} 
+
+.last_footer_right>span {
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.last_footer_left {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    font-size: 12px;
+    padding:20px 10px;
+    left:1%;
+} 
+
+.last_footer_left>span {
+    margin-left:10px;
+}
+
+.final_footer {
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+.footer_lists:hover{
+    transform: scale(1.1);
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.last{
+    transform: 0.3s;
+}
+
+
+
+    </style>
+
+
+
+    </head>
+
+
+    <body>
+
+        <header>
+            <nav>
+                <div>
+                    <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298654/logo_bz1eri.png" alt="brand__logo" style="width:100px; margin-left:70px; margin-top:9px"/>
+                </div>
+
+                <div>
+                    <div>
+                        <ul class="nav__bar__options">
+                            <li class="li">Products</li>
+                            <li class="li">AIoT Solutions</li>
+                            <li class="li">What's New</li>
+                            <li class="li">Support</li>
+                        </ul>
+                    </div>
+                    <div class="nav__bar__icons">
+                        <div class="li">
+                            <button class="a">
+                                <i class='fas fa-user-alt'></i>
+                            </button>
+                        </div>
+                        <div class="li">
+                            <button class="a">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                        <div class="li">
+                            <button class="a">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <main>
+                <div class="msi-carousel">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://storage-asset.msi.com/in/picture/banner/banner_1717064110abc11e8e3306a52dadc531e7c81ad3d7.jpeg" class="d-block w-100" alt="1st coursel">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://storage-asset.msi.com/global/picture/banner/banner_1723176536d337102c24adc0abd2398cfa7758715a.jpeg" class="d-block w-100" alt="2nd coursel">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://storage-asset.msi.com/global/picture/banner/banner_1695860274cca8d0fdad8514150ac910e77b87ba63.jpeg" class="d-block w-100" alt="3rd coursel">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>    
+        </header>
+
+
+<!-- Main 1 -->
+                <div>
+                    <h1 style="padding:30px; padding-top:40px; text-align:center; font-size:35px;"><b>Discover the Latest MSI Innovations</b></h1>
+                </div>
+                <div class="section1">
+                    <div class="card" style="width: 18rem; width:30%;">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298658/msi_flying_girl_sgyd7w.jpg" class="card-img-top" alt="msi_flying_girl">
+                        <div class="card-body" style="text-align: left">
+                          <p class="card-text"><b>Prestige 13 AI Evo A1M</b></p>
+                          <span>The Essence Of Elite</span>
+                        </div>
+                      </div>
+
+                      <div class="card" style="width: 18rem; width:30%;">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298658/dragon_tv_fv71ha.jpg" class="card-img-top" alt="dragon TV">
+                        <div class="card-body" style="text-align: left">
+                          <p class="card-text"><b>MEG 342C QD-OLED</b></p>
+                          <span>Brilliance Made Possible</span>
+                        </div>
+                      </div>
+
+                      <div class="card" style="width: 18rem; width:30%;">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298660/dragon_cooling_Fan_uj4lee.jpg" class="card-img-top" alt="dragon_cooling_Fan">
+                        <div class="card-body" style="text-align:left;">
+                          <p class="card-text"><b>GeForce RTX 40 GAMING Series</b></p>
+                          <span>Play Hard Stay Silent</span>
+                        </div>
+                      </div>
+                </div>     <br><br>
+
+<!-- Main 2 -->
+            
+            <div style="background-color: #FAFAFA;">
+                    <div>
+                        <h1 style="padding:30px; padding-top:40px; text-align:center; font-size:35px;"><b>Empower Your Business with AIoT Solutions</b></h1>
+                    </div>
+                <div  class="section2">
+
+                <div class="sec_card_flex_whole">
+                            <div class="card marg" style="width:23rem; border:0px solid white;">
+                                <img src="https://storage-asset.msi.com/global/picture/banner/banner_16853259486217c3c9845e55afa4e778eb5640a7b9.jpeg" class="card-img-top" alt="fuel car" style="height:550px;">
+                                <div class="card-body" style="text-align:left;">
+                                <p class="card-text"><b>EV Charging  Solutions</b></p>
+                                <span>Smart Charging for Business and Home</span>
+                                </div>    
+                            </div>      
+                    
+                    <div  class="sec_card_flex">
+                        <div class="sec_card">
+                            <div class="card marg" style="width: 20rem; border:0px solid white;">
+                                <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298660/MSI_Router_dcziu1.jpg" class="card-img-top" alt="MSI_Router">
+                                <div class="card-body" style="text-align:left;">
+                                  <p class="card-text"><b>AIoT && Industrial Solutions</b></p>
+                                  <span>Provide Embedded Boards & Systems wit...</span>
+                                </div>
+                            </div>
+                        
+                            <div class="card marg" style="width: 20rem; border:0px solid white; margin-top:20px;">
+                                <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298654/aeroplane_waste_fj2l5v.jpg" class="card-img-top" alt="aeroplane_waste">
+                                <div class="card-body" style="text-align:left;">
+                                  <p class="card-text"><b>FUNTORO Solutions</b></p>
+                                  <span>Global Leader in Vehicle Infotainment &...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sec_card">
+                            <div class="card marg" style="width: 20rem; border:0px solid white;">
+                                <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298661/MSI_Printer_jksjuz.jpg" class="card-img-top" alt="MSI_Printer">
+                                <div class="card-body" style="text-align:left; padding-bottom:30px;">
+                                  <p class="card-text"><b>Autonomous Mobile Robot (AMR)</b></p>
+                                  <span>AI, Automation and Robotics</span>
+                                </div>
+                            </div>
+                        
+                            <div class="card marg" style="width: 20rem; border:0px solid white; margin-top:30px;">
+                                <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298661/MSI_servers_tmu3yk.jpg" class="card-img-top" alt="MSI_servers">
+                                <div class="card-body" style="text-align:left; padding-bottom:25px;">
+                                  <p class="card-text"><b>Server, Networking & IIoT</b></p>
+                                  <span>Global Forerunner Hardware Provider.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sec_card">
+                            <div class="card marg" style="width: 20rem; border:0px solid white;">
+                                <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298659/Msi_person_mdyvfj.jpg" class="card-img-top" alt="Msi_person">
+                                <div class="card-body" style="text-align:left;">
+                                  <p class="card-text"><b>Rugged Tablet</b></p>
+                                  <span>Professional Design & Manufacture Service</span>
+                                </div>
+                            </div>
+                       
+                            <div class="card marg" style="width: 20rem; border:0px solid white; margin-top:20px;">
+                                <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298660/driver_MSI_kc8gfc.jpg" class="card-img-top" alt="driver_MSI">
+                                <div class="card-body" style="text-align: left">
+                                  <p class="card-text"><b>Automotive and Commercial</b></p>
+                                  <span>Your Best ODM Partner of AIoT Solution</span>
+                                </div>
+                            </div>
+                        </div>                  
+
+                    </div>
+
+                </div>
+                </div>
+
+
+<!-- Main 3 -->
+                <div>
+                    <h1 style="padding:30px; padding-top:40px; text-align:center; font-size:35px;"><b>The Future of Smart</b></h1>
+                </div>
+
+                <div class="sec_producta_images">
+                    <div class="MSI_products">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298659/msi_petrol_gun_rdzwhc.png" alt="EV_charger" class="product_image">
+                        <h3 class="product_title">EV Charger</h3>
+                    </div>
+                    <div class="MSI_products">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298661/MSI_servers_tmu3yk.jpg" alt="msi server" class="product_image">
+                        <h3 class="product_title">Server</h3>
+                    </div>
+    
+                    <div class="MSI_products">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298653/auto_com_nuvvgn.png" alt="auto & com" class="product_image">
+                        <h3 class="product_title">Automotive &<br>Commercial</h3>
+                    </div>
+    
+                    <div class="MSI_products">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298654/funtoro_dhcz3f.png" alt="funtoro" class="product_image">
+                        <h3 class="product_title">FUNTORO</h3>
+                    </div>
+    
+                    <div class="MSI_products">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298655/mobile_robot_hok5sc.png" alt="mobile robot" class="product_image">
+                        <h3 class="product_title">Autonomous<br>Mobile Robot</h3>
+                    </div>
+    
+                    <div class="MSI_products">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298653/AioT_wkcsvz.png" alt="AIoT" class="product_image">
+                        <h3 class="product_title">AIoT & Industrial</h3>
+                    </div>
+    
+                    <div class="MSI_products">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298661/tablet_zihhrp.png" alt="Rugged Tablet" class="product_image">
+                        <h3 class="product_title">Rugged Tablet</h3>
+                    </div>
+                </div>
+            </div>
+<!-- Main 4 -->                
+
+                <div class="whole_Png_Icons_section">
+                    <div class="full_png_icons">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298652/aiming_o3tx4l.png" alt="registering" class="png_images">
+                        <span style="color:black; margin-top:10px;"><a href="#"><u>Product Registration</u></a></span>
+                    </div>
+    
+                    <div class="full_png_icons">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298657/customer-service-icon-png-9_q0hbxf.png" alt="customer_service" class="png_images">
+                        <span style="color:black; margin-top:10px;"><a href="#"><u>Support & Service Location</u></a></span>
+                    </div>
+    
+                    <div class="full_png_icons">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298661/video-icon-png-3_j20pxg.png" alt="video" class="png_images">
+                        <span style="color:black; margin-top:10px;"><a href="#"><u>Video</u></a></span>
+                    </div>
+    
+                    <div class="full_png_icons">
+                        <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298656/forum_fgd6ko.png" alt="forum" class="png_images">
+                        <span style="color:black; margin-top:10px;"><a href="#"><u>MSI Forum</u></a></span>
+                    </div>
+                </div>
+
+<!-- Main 5 -->
+
+                <div class="full_wallet_webp">
+                    <div class="wallet">
+                        <img src="https://storage-asset.msi.com/frontend/imgs/reward2.webp">
+                        <div class="text_overlay"><b>MSI Rewad Program</b><br>
+                        Collect Points and Earn Cool Stuff</div>
+                    </div>
+
+                    <div class="wallet">
+                        <img src="https://storage-asset.msi.com/frontend/imgs/insider.webp">
+                        <div class="text_overlay"><b>MSI Insider</b><br>
+                        Wednesday at 8AM PST/16:00 CET</div>
+                    </div>
+                </div> <br> <br>
+            </main>
+            <hr>
+            
+    <footer>
+
+            <div class="footer1">
+                <div class="footer_community">
+                    <h2 style="color:#696969; font-size: 20px; font-weight: bold;">COMMUNITY</h2> <br>
+                    <div>
+                        <ul class="footer_lists">
+                            <li>MSI Reward Program</li> 
+                            
+                            <li>Forums</li> 
+                            
+                            <li>Social Media</li> 
+                            
+                            <li>Video</li>
+                            
+                            <li>Gaming Teams</li> 
+                           
+                            <li>Blogs</li> 
+                            
+                            <li>Customer Stories</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer_community">
+                    <h2 style="color:#696969; font-size: 20px; font-weight: bold;">SUPPORT</h2> <br>
+                    <div>
+                        <ul class="footer_lists">
+                            <li>Downloads</li> 
+                            
+                            <li>Member Center</li> 
+                            
+                            <li>Online Customer Service</li>
+                            
+                            <li>Service Locations</li> 
+                            
+                            <li>Warranty</li>
+                           
+                            <li>Remote Service</li>
+                        </ul>
+                    </div>
+                </div>  
+                
+                <div class="footer_community">
+                    <h2 style="color:#696969; font-size: 20px; font-weight: bold;">NEWS</h2> <br>
+                    <div>
+                        <ul class="footer_lists">
+                            <li>Press Room</li> 
+                            
+                            <li>Awards</li> 
+                            
+                            <li>RSS</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer_community">
+                    <h2 style="color:#696969; font-size: 20px; font-weight: bold;">MEDIA</h2> <br>
+                    <div>
+                        <ul class="footer_lists">
+                            <li>About MSI</li> 
+                            
+                            <li>Mission And Vision</li> 
+                            
+                            <li>Brand Story</li> 
+                            
+                            <li>Investor Information</li> 
+                            
+                            <li>Innovation DNA</li> 
+                           
+                            <li>CSR</li>
+                            
+                            <li>E-waste Management</li> 
+
+                            <li>TOLL-FREE NO. FOR THE E-WASTE: 1800-11-5525</li>
+
+                            <li>TOLL-FREE NO. OF THE RECYCLER: 1800-212-8783</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer_community">
+                    <h2 style="color:#696969; font-size: 20px; font-weight: bold;">ABOUT US</h2> <br>
+                    <div>
+                        <ul class="footer_lists">
+                            <li>Brochure</li> 
+                            
+                            <li>Wallpaper</li> 
+                            
+                            <li>MSI Apps</li> 
+
+                            <li>PSU Calculator</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                
+            <hr>
+
+
+            <div class="final_footer">
+                <div class="last_footer_left">
+                    <img src="https://res.cloudinary.com/djxjhszqc/image/upload/v1728298655/logo-footer_as1xcq.png" alt="logo">
+                    <span>Copyright © 2024 Micro-Star INT'L CO., LTD. All rights reserved.</span>
+                </div>
+                
+                <div class="last_footer_right">
+                    <span class="last"><a href="#" style="color:#696969;">Cookie Policy</a></span>
+                    <span><a href="#" style="color:#696969;">Privacy Policy</a></span>
+                    <span><a href="#" style="color:#696969;">Terms of Use</a></span>
+                    <span><a href="#" style="color:#696969;">Contact Us</a></span>
+                    <span><a href="#" style="color:#696969;"><i class="fa-solid fa-earth-americas" style="color: #eca409; margin-right: 5px;"></i>msi icon India / English</a></span>
+                </div>
+            </div>
+
+    </footer>
+
+    </body>
+</html>
